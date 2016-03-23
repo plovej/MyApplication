@@ -1,6 +1,7 @@
 package com.administrator.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,6 +25,8 @@ public class MainActivity extends Activity {
                             @Override
                             public void onClick(View view) {
                                 tv.setText("aleady click snackbar");
+                                Intent intent = new Intent(MainActivity.this, SimpleActivity.class);
+                                startActivity(intent);
                             }
                         })
                         .show();
